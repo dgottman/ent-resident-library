@@ -1,0 +1,39 @@
+{
+  "name": "ent-resident-library",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sync-guides": "tsx scripts/sync-guides.ts",
+    "validate-guides": "tsx scripts/validate-guides.ts",
+    "clean-orphaned-guides": "tsx scripts/clean-orphaned-guides.ts",
+    "guides": "npm run sync-guides && npm run validate-guides && npm run dev",
+    "check": "npm run validate-guides && npm run typecheck && npm run lint && npm test && npm run build"
+  },
+  "dependencies": {
+    "next": "^16.2.12",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.12",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.20.6",
+    "typescript": "^6.0.3",
+    "vitest": "^4.0.0"
+  }
+}

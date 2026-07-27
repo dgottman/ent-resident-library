@@ -1,0 +1,21 @@
+# dependencies
+/node_modules/
+
+# Next.js
+/.next/
+/out/
+
+# local-only settings
+.env*
+!.env.example
+
+# logs and tooling
+npm-debug.log*
+*.tsbuildinfo
+.vercel
+coverage/
+
+# operating systems
+.DS_Store
+Thumbs.db
+desktop.ini

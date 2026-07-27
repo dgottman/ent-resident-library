@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy only the entry you need into guide-overrides.json. Match by source-relative path or stable ID. These examples are not active.",
+  "Head and Neck/Free Flaps/Free_Flap_Reconstruction_Volume_I_Reconstructive_Thinking.pdf": {
+    "shortTitle": "Reconstructive Thinking",
+    "description": "Foundational principles for planning free-flap reconstruction.",
+    "featured": true,
+    "lastReviewedDate": "2026-07-01",
+    "tags": ["free flap", "reconstruction", "head and neck"]
+  },
+  "Otology/Vestibular/Vestibular_System_Volume_I_Functional_Anatomy_and_Physiology.pdf": {
+    "shortTitle": "Vestibular Foundations",
+    "boardRelevant": true,
+    "tags": ["vestibular", "physiology", "otology"]
+  }
+}
