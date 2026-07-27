@@ -14,6 +14,13 @@ import {
 } from "@/lib/guides";
 import { formatBytes, slugify } from "@/lib/guide-utils";
 
+function metaDescription(value: string): string {
+  const firstSentence = value.match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() ?? value;
+  return firstSentence.length <= 160
+    ? firstSentence
+    : `${firstSentence.slice(0, 157).trimEnd()}…`;
+}
+
 export function generateStaticParams() {
   return publishedGuides.map((guide) => ({ slug: guide.slug }));
 }
@@ -28,10 +35,10 @@ export async function generateMetadata({
   if (!guide) return {};
   return {
     title: guide.displayTitle,
-    description: guide.description,
+    description: metaDescription(guide.synopsis ?? guide.description),
     openGraph: {
       title: guide.displayTitle,
-      description: guide.description,
+      description: metaDescription(guide.synopsis ?? guide.description),
       type: "article",
       modifiedTime: guide.lastReviewedDate ?? guide.fileModifiedDate,
     },
@@ -46,6 +53,7 @@ export default async function GuidePage({
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
   if (!guide) notFound();
+  const synopsis = guide.synopsis ?? guide.description;
   const neighbors = getSeriesNeighbors(guide);
   const explicitRelated = guide.relatedGuideIds
     .map((id) => publishedGuides.find((candidate) => candidate.id === id))
@@ -88,7 +96,7 @@ export default async function GuidePage({
               PDF study guide {guide.volumeLabel && `· ${guide.volumeLabel}`}
             </p>
             <h1>{guide.displayTitle}</h1>
-            <p className="guide-lede">{guide.description}</p>
+            <p className="guide-lede">{synopsis}</p>
             <div className="guide-actions">
               <a
                 className="button button-primary"

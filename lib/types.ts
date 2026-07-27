@@ -18,6 +18,7 @@ export interface Guide {
   volumeLabel?: string;
   seriesOrder: number;
   description: string;
+  synopsis?: string;
   tags: string[];
   authors: string[];
   publicationStatus: PublicationStatus;
@@ -49,6 +50,7 @@ export type GuideOverride = Partial<
     | "displayTitle"
     | "shortTitle"
     | "description"
+    | "synopsis"
     | "category"
     | "collection"
     | "topic"
