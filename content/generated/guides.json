@@ -1,7 +1,7 @@
 {
   "_generatedComment": "GENERATED FILE. Run npm run sync-guides; do not edit manually.",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T23:34:51.463Z",
+  "generatedAt": "2026-07-28T00:12:03.585Z",
   "sourceLabel": "Study Guides",
   "guides": [
     {
@@ -36,12 +36,20 @@
       "fileModifiedDate": "2026-07-24T23:24:53.898Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 2500915,
+      "pageCount": 48,
+      "coverUrl": "/guide-covers/guide_2707a05ddb73e5d9.png",
       "fileHash": "043c1dda9b3e59494688523b375abe59787a9049c7b619f0d95ac274053bd942",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume I establishes the reasoning that anchors the series before any donor site is named. It follows the anticipated resection through patient goals, oncologic context, a six-domain defect audit, tissue matching, and free-flap physiology. Residents learn to distinguish lining, cover, volume, structure, barriers, and residual dynamic function; identify how geometry, pedicle route, and contamination change the construct; and build a primary plan plus backup. Figures and tables connect defect properties to flap categories and arterial-versus-venous bedside patterns. Unlike Volume II’s donor anatomy or later operative chapters, this volume asks first what the reconstruction must accomplish. It prepares residents to present a defensible, defect-first plan on boards and in preoperative discussion."
+      "shortTitle": "Reconstructive Thinking",
+      "synopsis": "Volume I establishes the reasoning that anchors the series before any donor site is named. It follows the anticipated resection through patient goals, oncologic context, a six-domain defect audit, tissue matching, and free-flap physiology. Residents learn to distinguish lining, cover, volume, structure, barriers, and residual dynamic function; identify how geometry, pedicle route, and contamination change the construct; and build a primary plan plus backup. Figures and tables connect defect properties to flap categories and arterial-versus-venous bedside patterns. Unlike Volume II’s donor anatomy or later operative chapters, this volume asks first what the reconstruction must accomplish. It prepares residents to present a defensible, defect-first plan on boards and in preoperative discussion.",
+      "learningOutcomes": [
+        "Describe a head and neck defect by its missing lining, cover, volume, structure, barriers, and residual dynamic function.",
+        "Translate patient factors, geometry, contamination, and pedicle needs into reconstructive priorities.",
+        "Present a defect-first primary reconstructive plan with a reasoned backup."
+      ]
     },
     {
       "id": "guide_ac60fb3cc938d120",
@@ -75,12 +83,20 @@
       "fileModifiedDate": "2026-07-25T05:11:02.217Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 1743201,
+      "pageCount": 48,
+      "coverUrl": "/guide-covers/guide_ac60fb3cc938d120.png",
       "fileHash": "d1534b541d58b498e2fe8cd1604e3fc7aff83ab77a8a9f6d167a7229d3d8b1a4",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume II shifts from the defect audit to the donor-site side of the decision. It teaches residents to read a free flap as a vascular pedicle with specific skin, fascia, muscle, bone, and bowel components—not as a memorized answer to a diagnosis. Chapters compare radial forearm, ALT, fibula, subscapular, DCIA, and selected alternatives through perforator anatomy, tissue geometry, donor assessment, and morbidity. Tables and cases clarify why a fibula suits long osteotomy-heavy mandibular reconstruction, when subscapular tissue offers independent components, and why thin lining may favor radial forearm or a favorable ALT. This second volume supplies the toolkit that Volume III applies to individual defects, while reinforcing useful operative anticipation rather than independent technical instruction."
+      "shortTitle": "The Free Flap Toolkit",
+      "synopsis": "Volume II shifts from the defect audit to the donor-site side of the decision. It teaches residents to read a free flap as a vascular pedicle with specific skin, fascia, muscle, bone, and bowel components—not as a memorized answer to a diagnosis. Chapters compare radial forearm, ALT, fibula, subscapular, DCIA, and selected alternatives through perforator anatomy, tissue geometry, donor assessment, and morbidity. Tables and cases clarify why a fibula suits long osteotomy-heavy mandibular reconstruction, when subscapular tissue offers independent components, and why thin lining may favor radial forearm or a favorable ALT. This second volume supplies the toolkit that Volume III applies to individual defects, while reinforcing useful operative anticipation rather than independent technical instruction.",
+      "learningOutcomes": [
+        "Compare the pedicle, tissue components, geometry, and donor-site tradeoffs of the major free flaps.",
+        "Match flap characteristics to lining, bulk, bone, and multi-component reconstructive needs.",
+        "Anticipate donor assessment and operative considerations when discussing flap options."
+      ]
     },
     {
       "id": "guide_762d3ee248f29e66",
@@ -114,12 +130,20 @@
       "fileModifiedDate": "2026-07-25T05:52:41.762Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 2159286,
+      "pageCount": 43,
+      "coverUrl": "/guide-covers/guide_762d3ee248f29e66.png",
       "fileHash": "1d6909d4ad4d2a533bea24d8a4067094cb20764cda7d008695254b3af4bdd0cb",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume III brings the earlier defect audit and donor-site toolkit together at the level of the actual resection. It organizes planning around oral cavity, tongue, cheek, palate, mandible, maxilla, pharynx, scalp, temporal bone, orbit, and skull base defects, asking what native function remains and what failure matters most. Residents work through mobility versus bulk, layered surfaces, dental and orbital support, barrier construction, dead space, and conduit geometry before choosing a flap. Integrated cases model how to state the defect, tissue requirements, primary construct, and backup rather than recite a preferred flap. It is the series’ construct-selection volume: Volume II explains available tissue, whereas Volume IV addresses the operative execution once the reconstructive plan is chosen."
+      "shortTitle": "Reconstruction by Defect",
+      "synopsis": "Volume III brings the earlier defect audit and donor-site toolkit together at the level of the actual resection. It organizes planning around oral cavity, tongue, cheek, palate, mandible, maxilla, pharynx, scalp, temporal bone, orbit, and skull base defects, asking what native function remains and what failure matters most. Residents work through mobility versus bulk, layered surfaces, dental and orbital support, barrier construction, dead space, and conduit geometry before choosing a flap. Integrated cases model how to state the defect, tissue requirements, primary construct, and backup rather than recite a preferred flap. It is the series’ construct-selection volume: Volume II explains available tissue, whereas Volume IV addresses the operative execution once the reconstructive plan is chosen.",
+      "learningOutcomes": [
+        "Identify the functional priorities and dominant failure modes of common head and neck defects.",
+        "Build a tissue-and-geometry specification before selecting a reconstructive construct.",
+        "Defend a primary and backup construct for oral cavity, bony, pharyngeal, skin, or skull-base defects."
+      ]
     },
     {
       "id": "guide_65ba9fb1e952aaad",
@@ -153,12 +177,20 @@
       "fileModifiedDate": "2026-07-27T22:27:39.130Z",
       "synchronizedDate": "2026-07-27T22:56:42.301Z",
       "fileSize": 1369984,
+      "pageCount": 37,
+      "coverUrl": "/guide-covers/guide_65ba9fb1e952aaad.png",
       "fileHash": "88da2366842e17fce3615a6da16af19efa78451adb8ab7bdd35a35a9fb8d329b",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume IV follows a chosen reconstructive construct through the operating room. Its central idea is that a free-flap operation succeeds when planning, ablation, harvest, recipient vessels, microvascular work, inset, airway, and physiology remain aligned—not when an anastomosis is merely patent. Residents learn to define intraoperative branch points, coordinate a two-team case, assess recipient arteries and veins, understand end-to-end and end-to-side logic, manage size mismatch and venous coupling, and protect the pedicle during routing, closure, drains, and positioning. It also links fluids, vasopressors, temperature, transfusion, nutrition, and handoff to flap safety. This is the execution stage after Volumes I–III; postoperative monitoring, salvage, and rehabilitation begin in Volume V."
+      "shortTitle": "Building the Reconstruction",
+      "synopsis": "Volume IV follows a chosen reconstructive construct through the operating room. Its central idea is that a free-flap operation succeeds when planning, ablation, harvest, recipient vessels, microvascular work, inset, airway, and physiology remain aligned—not when an anastomosis is merely patent. Residents learn to define intraoperative branch points, coordinate a two-team case, assess recipient arteries and veins, understand end-to-end and end-to-side logic, manage size mismatch and venous coupling, and protect the pedicle during routing, closure, drains, and positioning. It also links fluids, vasopressors, temperature, transfusion, nutrition, and handoff to flap safety. This is the execution stage after Volumes I–III; postoperative monitoring, salvage, and rehabilitation begin in Volume V.",
+      "learningOutcomes": [
+        "Anticipate branch points and coordinate the reconstructive sequence within a two-team operation.",
+        "Explain recipient-vessel, anastomotic, inset, and pedicle-routing decisions in practical terms.",
+        "Connect perioperative physiology, airway planning, drains, positioning, and handoff to flap safety."
+      ]
     },
     {
       "id": "guide_096b4b10900dd59c",
@@ -192,12 +224,20 @@
       "fileModifiedDate": "2026-07-26T01:00:35.914Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 2112626,
+      "pageCount": 40,
+      "coverUrl": "/guide-covers/guide_096b4b10900dd59c.png",
       "fileHash": "063927a4263f3b1ed578ddd19e6ab266c0119c3e7434cf662bb73f3aae5ebd80",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume V carries the reconstruction beyond the operating room, from the first handoff through late survivorship. It teaches residents to establish a flap baseline, perform a reproducible examination, interpret arterial insufficiency versus venous congestion, and escalate a concerning change while considering the entire construct and airway. Subsequent sections address return-to-OR reasoning, salivary leak and fistula, carotid-risk situations, donor-site complications, nutrition, decannulation, swallowing rehabilitation, and late pain or dysfunction. The staged timeline and tables make clear that the dominant threats change from vascular compromise to healing, function, and oncologic surveillance. It completes the series: earlier volumes select and build the reconstruction; this volume focuses on protecting, salvaging, and helping the patient use it."
+      "shortTitle": "The Postoperative Flap",
+      "synopsis": "Volume V carries the reconstruction beyond the operating room, from the first handoff through late survivorship. It teaches residents to establish a flap baseline, perform a reproducible examination, interpret arterial insufficiency versus venous congestion, and escalate a concerning change while considering the entire construct and airway. Subsequent sections address return-to-OR reasoning, salivary leak and fistula, carotid-risk situations, donor-site complications, nutrition, decannulation, swallowing rehabilitation, and late pain or dysfunction. The staged timeline and tables make clear that the dominant threats change from vascular compromise to healing, function, and oncologic surveillance. It completes the series: earlier volumes select and build the reconstruction; this volume focuses on protecting, salvaging, and helping the patient use it.",
+      "learningOutcomes": [
+        "Establish and document a reproducible postoperative flap baseline and examination.",
+        "Distinguish arterial insufficiency from venous congestion and escalate concerning changes promptly.",
+        "Organize later care around fistula risk, airway, nutrition, rehabilitation, donor morbidity, and survivorship."
+      ]
     },
     {
       "id": "guide_178e1f7ca20be3f0",
@@ -230,12 +270,20 @@
       "fileModifiedDate": "2026-07-26T14:06:41.115Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 2196147,
+      "pageCount": 25,
+      "coverUrl": "/guide-covers/guide_178e1f7ca20be3f0.png",
       "fileHash": "e277e3d39d0f72e358c111055629eb1ba8e967d7bf5630f61fbc6e2f1e9715f5",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume I opens the salivary series with the problem a resident first encounters: an undifferentiated salivary-region mass. It uses a management-centered sequence—clinical behavior, anatomic localization, imaging, and tissue sampling—to decide what the first operation, or decision not to operate, must accomplish. Residents learn the triple test; parotid, submandibular, sublingual, minor-gland, nodal, and nonsalivary compartments; modality selection; FNA and core biopsy limits; Milan System risk categories; modern pathology; and AJCC Version 9 orientation. Integrated cases highlight discordance, such as a reassuring sample that does not fit facial weakness or imaging. Unlike later volumes on specific histology, surgery, or surveillance, this foundation teaches how to map risk and avoid an inadequately planned first treatment."
+      "shortTitle": "Foundations and Diagnostic Approach",
+      "synopsis": "Volume I opens the salivary series with the problem a resident first encounters: an undifferentiated salivary-region mass. It uses a management-centered sequence—clinical behavior, anatomic localization, imaging, and tissue sampling—to decide what the first operation, or decision not to operate, must accomplish. Residents learn the triple test; parotid, submandibular, sublingual, minor-gland, nodal, and nonsalivary compartments; modality selection; FNA and core biopsy limits; Milan System risk categories; modern pathology; and AJCC Version 9 orientation. Integrated cases highlight discordance, such as a reassuring sample that does not fit facial weakness or imaging. Unlike later volumes on specific histology, surgery, or surveillance, this foundation teaches how to map risk and avoid an inadequately planned first treatment.",
+      "learningOutcomes": [
+        "Localize a salivary-region mass and integrate clinical behavior, imaging, and tissue sampling as a triple test.",
+        "Interpret FNA, core biopsy, Milan categories, pathology, and staging in their management context.",
+        "Recognize diagnostic discordance that should change the planned first treatment."
+      ]
     },
     {
       "id": "guide_63d53f5d73f69d29",
@@ -268,12 +316,20 @@
       "fileModifiedDate": "2026-07-27T18:42:59.310Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 1684170,
+      "pageCount": 30,
+      "coverUrl": "/guide-covers/guide_63d53f5d73f69d29.png",
       "fileHash": "8ce0b8c4a6d72ab01733355b7b854407e51e4ef87c2494da09dab57d5b094241",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume II focuses on benign and borderline salivary neoplasms without treating “benign” as a promise of easy diagnosis or surgery. It builds a pattern language from low-power architecture, cell phenotype, tumor interface, and clinical setting, then applies it to pleomorphic adenoma, Warthin tumor, basaloid adenomas, myoepithelioma, oncocytic lesions, and selected newer entities and mimics. Residents learn why capsular violation changes the future problem in pleomorphic adenoma, when a concordant Warthin tumor may be observed, and why invasion rather than cytologic blandness separates important mimics. Management chapters connect diagnostic confidence, anatomy, natural history, surgical morbidity, and patient preference. Following Volume I’s workup, this volume clarifies when limited surgery or observation is defensible before Volume III addresses malignant biology."
+      "shortTitle": "Benign and Borderline Neoplasms",
+      "synopsis": "Volume II focuses on benign and borderline salivary neoplasms without treating “benign” as a promise of easy diagnosis or surgery. It builds a pattern language from low-power architecture, cell phenotype, tumor interface, and clinical setting, then applies it to pleomorphic adenoma, Warthin tumor, basaloid adenomas, myoepithelioma, oncocytic lesions, and selected newer entities and mimics. Residents learn why capsular violation changes the future problem in pleomorphic adenoma, when a concordant Warthin tumor may be observed, and why invasion rather than cytologic blandness separates important mimics. Management chapters connect diagnostic confidence, anatomy, natural history, surgical morbidity, and patient preference. Following Volume I’s workup, this volume clarifies when limited surgery or observation is defensible before Volume III addresses malignant biology.",
+      "learningOutcomes": [
+        "Use architecture, cell phenotype, interface, and clinical setting to organize a benign salivary differential.",
+        "Explain how pleomorphic adenoma, Warthin tumor, and important mimics differ in natural history and management.",
+        "Balance diagnostic confidence, anatomy, morbidity, and patient preference when considering observation or surgery."
+      ]
     },
     {
       "id": "guide_262b74894ec39595",
@@ -306,12 +362,20 @@
       "fileModifiedDate": "2026-07-27T18:43:49.193Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 2228713,
+      "pageCount": 24,
+      "coverUrl": "/guide-covers/guide_262b74894ec39595.png",
       "fileHash": "1e65d248fc38858f3fe0319515c4b2b2ba14b5f43b7f182d2b5d14f6d9acc731",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume III organizes malignant salivary tumors as biologic families rather than an alphabetical list of rare diagnoses. It teaches residents to read a pathology report in four coordinates: entity, tumor-specific grade or biologic tier, anatomic extent, and actionable biology. Chapters compare the defining patterns and clinical consequences of mucoepidermoid, adenoid cystic, acinic cell, secretory, salivary duct, carcinoma ex pleomorphic adenoma, polymorphous, biphasic, and myoepithelial carcinomas, along with difficult mimics and high-grade transformation. Cases show how perineural behavior, nodal risk, metastatic tempo, or a molecular finding changes preoperative planning. This is the series’ biology-and-risk volume, positioned between Volume II’s benign differential and Volume IV’s operation planning; it explains what the diagnosis should predict before the patient reaches the operating room or tumor board."
+      "shortTitle": "Malignant Neoplasms",
+      "synopsis": "Volume III organizes malignant salivary tumors as biologic families rather than an alphabetical list of rare diagnoses. It teaches residents to read a pathology report in four coordinates: entity, tumor-specific grade or biologic tier, anatomic extent, and actionable biology. Chapters compare the defining patterns and clinical consequences of mucoepidermoid, adenoid cystic, acinic cell, secretory, salivary duct, carcinoma ex pleomorphic adenoma, polymorphous, biphasic, and myoepithelial carcinomas, along with difficult mimics and high-grade transformation. Cases show how perineural behavior, nodal risk, metastatic tempo, or a molecular finding changes preoperative planning. This is the series’ biology-and-risk volume, positioned between Volume II’s benign differential and Volume IV’s operation planning; it explains what the diagnosis should predict before the patient reaches the operating room or tumor board.",
+      "learningOutcomes": [
+        "Read malignant salivary pathology by entity, tumor-specific grade, anatomic extent, and actionable biology.",
+        "Connect perineural behavior, nodal risk, metastatic tempo, and molecular findings to clinical planning.",
+        "Differentiate major malignant families and difficult mimics by the consequences their diagnosis should predict."
+      ]
     },
     {
       "id": "guide_f95e9a3f048e02b3",
@@ -344,12 +408,20 @@
       "fileModifiedDate": "2026-07-27T22:10:25.943Z",
       "synchronizedDate": "2026-07-27T22:56:42.301Z",
       "fileSize": 1951397,
+      "pageCount": 25,
+      "coverUrl": "/guide-covers/guide_f95e9a3f048e02b3.png",
       "fileHash": "2df67c184de36625021ca96e49b3a953e8767934deaae87717097c6df15d07af",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume IV converts the diagnostic and biologic information from the first three volumes into an oncologically sound first operation. It distinguishes parotidectomy extent, facial-nerve preservation or sacrifice, deep-lobe and parapharyngeal exposure, other salivary sites, cN0 versus cN+ neck management, reconstruction, complications, and specimen communication. Residents learn to plan around credible extensions of disease, not the most reassuring biopsy alone; use focused frozen-section questions; preserve an intact, separable nerve; prepare reanimation when sacrifice is plausible; and map margins and nodal basins for later treatment decisions. Integrated cases make the same procedure name look appropriately different for low-grade superficial disease, high-grade nodal disease, nerve involvement, or deep-lobe tumors. It is the operative phase of the series, before Volume V addresses adjuvant treatment, recurrence, and surveillance."
+      "shortTitle": "Surgical Management and the Neck",
+      "synopsis": "Volume IV converts the diagnostic and biologic information from the first three volumes into an oncologically sound first operation. It distinguishes parotidectomy extent, facial-nerve preservation or sacrifice, deep-lobe and parapharyngeal exposure, other salivary sites, cN0 versus cN+ neck management, reconstruction, complications, and specimen communication. Residents learn to plan around credible extensions of disease, not the most reassuring biopsy alone; use focused frozen-section questions; preserve an intact, separable nerve; prepare reanimation when sacrifice is plausible; and map margins and nodal basins for later treatment decisions. Integrated cases make the same procedure name look appropriately different for low-grade superficial disease, high-grade nodal disease, nerve involvement, or deep-lobe tumors. It is the operative phase of the series, before Volume V addresses adjuvant treatment, recurrence, and surveillance.",
+      "learningOutcomes": [
+        "Plan parotid and other salivary operations around credible disease extent rather than procedure labels.",
+        "Reason through facial-nerve preservation or sacrifice, reanimation readiness, and cN0 or cN+ neck management.",
+        "Use focused frozen-section questions and specimen mapping to support margin and adjuvant decisions."
+      ]
     },
     {
       "id": "guide_2e5dfbebdc55d3d7",
@@ -382,12 +454,20 @@
       "fileModifiedDate": "2026-07-27T22:28:15.865Z",
       "synchronizedDate": "2026-07-27T22:56:42.301Z",
       "fileSize": 1021382,
+      "pageCount": 24,
+      "coverUrl": "/guide-covers/guide_2e5dfbebdc55d3d7.png",
       "fileHash": "6b4df32766b67a9a62811869e8f749ab444027873e7cfda36025f137ff562301",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume V closes the salivary series by turning final pathology and altered postoperative anatomy into a long-term oncologic plan. It frames adverse features as a failure map for the local bed, named nerve pathways, nodes, distant disease, and actionable biology, then applies that map to postoperative radiation, target design, unresectable disease, locoregional recurrence, metastases, systemic options, and surveillance. Residents learn why chemotherapy is not routinely added to radiation outside a trial, when re-resection, reirradiation, observation, ablation, targeted therapy, or a trial may fit the clinical situation, and how AR, HER2, and NTRK results can matter in advanced disease. The final framework also includes function and survivorship. After Volume IV’s operation, this volume answers how treatment decisions and follow-up continue over the disease’s particular biologic time horizon."
+      "shortTitle": "Adjuvant Therapy, Recurrent Disease, and Surveillance",
+      "synopsis": "Volume V closes the salivary series by turning final pathology and altered postoperative anatomy into a long-term oncologic plan. It frames adverse features as a failure map for the local bed, named nerve pathways, nodes, distant disease, and actionable biology, then applies that map to postoperative radiation, target design, unresectable disease, locoregional recurrence, metastases, systemic options, and surveillance. Residents learn why chemotherapy is not routinely added to radiation outside a trial, when re-resection, reirradiation, observation, ablation, targeted therapy, or a trial may fit the clinical situation, and how AR, HER2, and NTRK results can matter in advanced disease. The final framework also includes function and survivorship. After Volume IV’s operation, this volume answers how treatment decisions and follow-up continue over the disease’s particular biologic time horizon.",
+      "learningOutcomes": [
+        "Translate adverse pathology and postoperative anatomy into a local, neural, nodal, distant, and biologic failure map.",
+        "Explain when postoperative radiation, re-resection, reirradiation, observation, ablation, targeted therapy, or trials may be considered.",
+        "Design surveillance and survivorship priorities that reflect salivary histology and its time horizon."
+      ]
     },
     {
       "id": "guide_08e42a51f6e141f5",
@@ -421,12 +501,20 @@
       "fileModifiedDate": "2026-07-27T22:49:24.223Z",
       "synchronizedDate": "2026-07-27T22:56:42.301Z",
       "fileSize": 2803899,
+      "pageCount": 38,
+      "coverUrl": "/guide-covers/guide_08e42a51f6e141f5.png",
       "fileHash": "74ede9c619bddad2a0090ddc60871f3ef51d8dc494c016e26f9b20bcebe346d9",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume I builds the physiologic model behind the rest of the vestibular series. It follows head motion from the semicircular canals and otolith organs through hair-cell transduction, tonic afferent coding, vestibular nuclei, cerebellar processing, and the reflexes that stabilize gaze, head, body, and perception. Residents work through push-pull canal organization, Ewald’s laws, gravito-inertial ambiguity, reference-frame transformations, velocity storage, multisensory integration, and compensation after loss. The major figures and tables connect physical forces to the eye movements, oscillopsia, and balance consequences seen clinically. Unlike Volume II’s bedside localization and testing, this volume does not organize around disease names. It gives residents a causal model so later examination findings and test disagreements can be explained rather than memorized."
+      "shortTitle": "Functional Anatomy and Physiology",
+      "synopsis": "Volume I builds the physiologic model behind the rest of the vestibular series. It follows head motion from the semicircular canals and otolith organs through hair-cell transduction, tonic afferent coding, vestibular nuclei, cerebellar processing, and the reflexes that stabilize gaze, head, body, and perception. Residents work through push-pull canal organization, Ewald’s laws, gravito-inertial ambiguity, reference-frame transformations, velocity storage, multisensory integration, and compensation after loss. The major figures and tables connect physical forces to the eye movements, oscillopsia, and balance consequences seen clinically. Unlike Volume II’s bedside localization and testing, this volume does not organize around disease names. It gives residents a causal model so later examination findings and test disagreements can be explained rather than memorized.",
+      "learningOutcomes": [
+        "Trace semicircular-canal and otolith signals from hair-cell transduction through central vestibular pathways.",
+        "Use push-pull organization, Ewald’s laws, and reference frames to predict eye and balance responses.",
+        "Explain how unilateral loss and compensation produce recognizable symptoms and examination findings."
+      ]
     },
     {
       "id": "guide_9441140824050fc4",
@@ -460,12 +548,20 @@
       "fileModifiedDate": "2026-07-27T21:57:30.729Z",
       "synchronizedDate": "2026-07-27T22:56:42.301Z",
       "fileSize": 3787621,
+      "pageCount": 35,
+      "coverUrl": "/guide-covers/guide_9441140824050fc4.png",
       "fileHash": "a39731318bd632e64f3147909204177cb6154f3fd3c30c391ecfdc5fd3612af6",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume II turns Volume I’s physiology into a practical diagnostic sequence. It starts with the temporal architecture of dizziness—triggered, spontaneous episodic, acute continuous, or chronic—then uses ocular motor findings, nystagmus vectors, head impulse, skew, positional maneuvers, hearing, gait, and dynamic vision to localize the problem. Residents learn when HINTS and HINTS+ apply, how Dix-Hallpike and roll testing map to canal mechanics, and what calorics, vHIT, rotary chair, VEMPs, and posturography actually test. Four integrated encounters show how to choose the next test or imaging study from the unresolved question. This middle volume is about localization, not disease labels; Volume III uses the same framework to diagnose and manage named vestibular syndromes."
+      "shortTitle": "Bedside Localization and Vestibular Testing",
+      "synopsis": "Volume II turns Volume I’s physiology into a practical diagnostic sequence. It starts with the temporal architecture of dizziness—triggered, spontaneous episodic, acute continuous, or chronic—then uses ocular motor findings, nystagmus vectors, head impulse, skew, positional maneuvers, hearing, gait, and dynamic vision to localize the problem. Residents learn when HINTS and HINTS+ apply, how Dix-Hallpike and roll testing map to canal mechanics, and what calorics, vHIT, rotary chair, VEMPs, and posturography actually test. Four integrated encounters show how to choose the next test or imaging study from the unresolved question. This middle volume is about localization, not disease labels; Volume III uses the same framework to diagnose and manage named vestibular syndromes.",
+      "learningOutcomes": [
+        "Classify dizziness by timing and triggers before choosing a localization pathway.",
+        "Interpret eye movements, head impulse, skew, positional maneuvers, hearing, and gait as an anatomic pattern.",
+        "Select vestibular testing or imaging according to the specific unresolved diagnostic question."
+      ]
     },
     {
       "id": "guide_8526be582ab1567c",
@@ -499,12 +595,20 @@
       "fileModifiedDate": "2026-07-24T16:49:07.006Z",
       "synchronizedDate": "2026-07-27T19:35:53.320Z",
       "fileSize": 1624029,
+      "pageCount": 36,
+      "coverUrl": "/guide-covers/guide_8526be582ab1567c.png",
       "fileHash": "715dee6d3a9db87d4fe700755c9fa6090f3285da55815d4d9a26f50ef4bee1a6",
       "relatedGuideIds": [],
       "prerequisites": [],
       "privacyWarnings": [],
       "orphaned": false,
-      "synopsis": "Volume III completes the vestibular progression by moving from a localizing syndrome to a defensible disease model and management plan. It applies timing, triggers, examination, hearing findings, testing, and imaging to BPPV, acute unilateral vestibulopathy, stroke alternatives, Ménière disease, vestibular migraine, chronic vestibular disorders, third-window syndromes, vestibular schwannoma, and ototoxic injury. Each disorder is framed by mechanism, expected and disconfirming findings, treatment priorities, and a boards-relevant distinction. Integrated cases reinforce the need to earn the disease label: a positional complaint is not automatically BPPV, and continuous vertigo is not automatically peripheral. After Volume I explains the system and Volume II localizes dysfunction, this volume helps residents select disease-specific care, rehabilitation, escalation, and follow-up without bypassing the diagnostic reasoning."
+      "shortTitle": "Clinical Vestibular Syndromes: Diagnosis and Management",
+      "synopsis": "Volume III completes the vestibular progression by moving from a localizing syndrome to a defensible disease model and management plan. It applies timing, triggers, examination, hearing findings, testing, and imaging to BPPV, acute unilateral vestibulopathy, stroke alternatives, Ménière disease, vestibular migraine, chronic vestibular disorders, third-window syndromes, vestibular schwannoma, and ototoxic injury. Each disorder is framed by mechanism, expected and disconfirming findings, treatment priorities, and a boards-relevant distinction. Integrated cases reinforce the need to earn the disease label: a positional complaint is not automatically BPPV, and continuous vertigo is not automatically peripheral. After Volume I explains the system and Volume II localizes dysfunction, this volume helps residents select disease-specific care, rehabilitation, escalation, and follow-up without bypassing the diagnostic reasoning.",
+      "learningOutcomes": [
+        "Build disease-specific differentials from a localized acute, episodic, positional, or chronic vestibular syndrome.",
+        "Identify expected and disconfirming findings for common peripheral, central, and third-window disorders.",
+        "Choose initial management, rehabilitation, escalation, and follow-up that fit the working diagnosis."
+      ]
     }
   ]
 }

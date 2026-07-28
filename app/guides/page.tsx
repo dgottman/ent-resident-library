@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { GuideExplorer } from "@/components/guide-explorer";
 import { publishedGuides } from "@/lib/guides";
@@ -10,7 +9,12 @@ export const metadata: Metadata = {
     "Search and filter the complete ENT Resident Library by topic, collection, tag, and volume.",
 };
 
-export default function GuidesPage() {
+export default async function GuidesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
+  const { q = "" } = await searchParams;
   return (
     <div className="shell page">
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Study Guides" }]} />
@@ -23,9 +27,7 @@ export default function GuidesPage() {
           PDF.
         </p>
       </header>
-      <Suspense fallback={<p>Loading the guide directory…</p>}>
-        <GuideExplorer guides={publishedGuides} />
-      </Suspense>
+      <GuideExplorer guides={publishedGuides} initialQuery={q} />
     </div>
   );
 }

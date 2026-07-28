@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
-import { createReadStream } from "node:fs";
+import { spawnSync } from "node:child_process";
+import { createReadStream, existsSync } from "node:fs";
 import {
   access,
   copyFile,
@@ -33,6 +34,7 @@ import type {
 
 const projectRoot = process.cwd();
 const publicRoot = path.resolve(projectRoot, "public", "study-guides");
+const coverRoot = path.resolve(projectRoot, "public", "guide-covers");
 const manifestPath = path.resolve(
   projectRoot,
   "content",
@@ -162,6 +164,62 @@ async function destinationExists(filePath: string): Promise<boolean> {
   }
 }
 
+async function countPdfPages(filePath: string): Promise<number | undefined> {
+  const pdf = (await readFile(filePath)).toString("latin1");
+  const count = pdf.match(/\/Type\s*\/Page\b/g)?.length ?? 0;
+  return count > 0 ? count : undefined;
+}
+
+function pdfToPpmCommand(): string {
+  const configured = process.env.PDFTOPPM_BIN?.trim();
+  if (configured) return configured;
+  if (process.platform === "win32") {
+    for (const entry of (process.env.PATH ?? "").split(path.delimiter)) {
+      const bundled = path.resolve(
+        entry,
+        "..",
+        "..",
+        "native",
+        "poppler",
+        "Library",
+        "bin",
+        "pdftoppm.exe",
+      );
+      if (existsSync(bundled)) return bundled;
+    }
+  }
+  return "pdftoppm";
+}
+
+function renderPdfCover(sourcePath: string, destinationPrefix: string): string | undefined {
+  const result = spawnSync(
+    pdfToPpmCommand(),
+    [
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "-singlefile",
+      "-scale-to",
+      "720",
+      "-png",
+      sourcePath,
+      destinationPrefix,
+    ],
+    {
+      encoding: "utf8",
+      windowsHide: true,
+    },
+  );
+  if (result.status !== 0) {
+    return (
+      result.stderr?.trim() ||
+      result.error?.message ||
+      "pdftoppm was not available."
+    );
+  }
+}
+
 async function main() {
   loadEnvConfig(projectRoot);
   const sourceValue = process.env.STUDY_GUIDES_SOURCE_DIR?.trim();
@@ -236,6 +294,7 @@ async function main() {
   const usedDestinations = new Map<string, string>();
 
   await mkdir(publicRoot, { recursive: true });
+  await mkdir(coverRoot, { recursive: true });
 
   for (const sourcePath of discovered) {
     const relativePath = normalizeRelativePath(path.relative(sourceRoot, sourcePath));
@@ -273,6 +332,10 @@ async function main() {
         [relativePath, title, folder.category, folder.collection].join(" "),
       );
       const previousGuide = previousByPath.get(relativePath.toLocaleLowerCase());
+      const pageCount = await countPdfPages(sourcePath);
+      const coverFilename = `${id}.png`;
+      const coverAbsolutePath = path.resolve(coverRoot, coverFilename);
+      const coverUrl = `/guide-covers/${coverFilename}`;
       const baseGuide: Guide = {
         id,
         slug: previousGuide?.slug ?? guideSlug(relativePath, title),
@@ -306,6 +369,8 @@ async function main() {
             ? previousGuide.synchronizedDate
             : now,
         fileSize: fileStats.size,
+        pageCount: pageCount ?? previousGuide?.pageCount,
+        coverUrl,
         fileHash,
         relatedGuideIds: [],
         prerequisites: [],
@@ -342,6 +407,7 @@ async function main() {
         previousGuide?.fileHash === fileHash &&
         previousGuide.destinationRelativePath === destinationRelativePath &&
         destinationPresent;
+      const coverPresent = await destinationExists(coverAbsolutePath);
       if (unchanged) {
         report.unchanged += 1;
       } else {
@@ -349,6 +415,20 @@ async function main() {
         await copyFile(sourcePath, destinationAbsolutePath);
         if (previousGuide) report.updated += 1;
         else report.imported += 1;
+      }
+      if (!unchanged || !coverPresent) {
+        const coverError = renderPdfCover(
+          sourcePath,
+          coverAbsolutePath.replace(/\.png$/i, ""),
+        );
+        if (coverError) {
+          report.warnings.push(
+            `${relativePath}: cover generation failed (${coverError})`,
+          );
+        }
+      }
+      if (!(await destinationExists(coverAbsolutePath))) {
+        delete guide.coverUrl;
       }
       currentGuides.push(guide);
     } catch (error) {

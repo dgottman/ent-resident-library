@@ -4,12 +4,15 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CopyLinkButton } from "@/components/copy-link-button";
 import { GuideCard } from "@/components/guide-card";
-import { ArrowIcon, DownloadIcon, FileIcon } from "@/components/icons";
+import { GuideCover } from "@/components/guide-cover";
+import { ArrowIcon, DownloadIcon } from "@/components/icons";
 import { PdfPreview } from "@/components/pdf-preview";
+import { SeriesProgress } from "@/components/series-progress";
+import { siteConfig } from "@/content/site-config";
 import {
   getCollectionSlug,
   getGuideBySlug,
-  getSeriesNeighbors,
+  getGuidesByCollection,
   publishedGuides,
 } from "@/lib/guides";
 import { formatBytes, slugify } from "@/lib/guide-utils";
@@ -33,14 +36,25 @@ export async function generateMetadata({
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
+  const title = guide.shortTitle ?? guide.displayTitle;
+  const description = metaDescription(guide.synopsis ?? guide.description);
   return {
-    title: guide.displayTitle,
-    description: metaDescription(guide.synopsis ?? guide.description),
+    title,
+    description,
     openGraph: {
-      title: guide.displayTitle,
-      description: metaDescription(guide.synopsis ?? guide.description),
+      title: `${title} | ${guide.collection}`,
+      description,
       type: "article",
       modifiedTime: guide.lastReviewedDate ?? guide.fileModifiedDate,
+      images: guide.coverUrl
+        ? [{ url: guide.coverUrl, alt: `Cover of ${title}` }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary",
+      title: `${title} | ${guide.collection}`,
+      description,
+      images: guide.coverUrl ? [guide.coverUrl] : undefined,
     },
   };
 }
@@ -53,8 +67,9 @@ export default async function GuidePage({
   const { slug } = await params;
   const guide = getGuideBySlug(slug);
   if (!guide) notFound();
+
   const synopsis = guide.synopsis ?? guide.description;
-  const neighbors = getSeriesNeighbors(guide);
+  const series = getGuidesByCollection(guide.collection);
   const explicitRelated = guide.relatedGuideIds
     .map((id) => publishedGuides.find((candidate) => candidate.id === id))
     .filter((candidate) => candidate !== undefined);
@@ -74,9 +89,43 @@ export default async function GuidePage({
     month: "long",
     day: "numeric",
   });
+  const updated = guide.lastReviewedDate ?? guide.fileModifiedDate;
+  const title = guide.shortTitle ?? guide.displayTitle;
+  const volumePosition = guide.volume ?? series.findIndex((item) => item.id === guide.id) + 1;
+  const feedbackSubject = `Error report: ${guide.collection} ${guide.volumeLabel ?? ""} - ${title}`;
+  const feedbackBody = [
+    `Guide: ${guide.collection} · ${guide.volumeLabel ?? `Volume ${volumePosition}`} · ${title}`,
+    `Page number (optional): `,
+    "",
+    "Describe the suspected error:",
+    "",
+  ].join("\n");
+  const reportHref = `mailto:${siteConfig.feedbackEmail}?subject=${encodeURIComponent(
+    feedbackSubject,
+  )}&body=${encodeURIComponent(feedbackBody)}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: title,
+    description: metaDescription(synopsis),
+    url: new URL(`/guides/${guide.slug}`, siteConfig.siteUrl).toString(),
+    dateModified: updated,
+    educationalLevel: "Otolaryngology resident",
+    learningResourceType: "Study guide",
+    isPartOf: {
+      "@type": "CreativeWorkSeries",
+      name: guide.collection,
+    },
+    encodingFormat: "application/pdf",
+    numberOfPages: guide.pageCount,
+  };
 
   return (
     <div className="shell page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
@@ -85,18 +134,35 @@ export default async function GuidePage({
             label: guide.collection,
             href: `/collections/${getCollectionSlug(guide.collection)}`,
           },
-          { label: guide.shortTitle ?? guide.displayTitle },
+          { label: title },
         ]}
       />
       <article>
-        <header className="guide-hero">
+        <header className="guide-hero guide-hero-polished">
+          <a
+            className="guide-hero-cover-link"
+            href={guide.pdfUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Read ${title} PDF`}
+          >
+            <GuideCover
+              src={guide.coverUrl}
+              alt={`First page of ${guide.collection}, ${guide.volumeLabel}: ${title}`}
+              priority
+            />
+          </a>
           <div className="guide-hero-main">
-            <p className="document-label">
-              <FileIcon />
-              PDF study guide {guide.volumeLabel && `· ${guide.volumeLabel}`}
+            <p className="eyebrow">
+              <Link
+                href={`/collections/${getCollectionSlug(guide.collection)}`}
+              >
+                {guide.collection}
+              </Link>{" "}
+              · {guide.volumeLabel ?? `Volume ${volumePosition}`} of {series.length}
             </p>
-            <h1>{guide.displayTitle}</h1>
-            <p className="guide-lede">{synopsis}</p>
+            <h1>{title}</h1>
+            <p className="guide-lede">{guide.description}</p>
             <div className="guide-actions">
               <a
                 className="button button-primary"
@@ -104,16 +170,28 @@ export default async function GuidePage({
                 target="_blank"
                 rel="noreferrer"
               >
-                Open PDF <ArrowIcon />
+                Read PDF <ArrowIcon />
               </a>
               <a className="button button-secondary" href={guide.pdfUrl} download>
                 <DownloadIcon /> Download PDF
               </a>
               <CopyLinkButton />
             </div>
-          </div>
-          <aside className="guide-facts" aria-label="Guide details">
-            <dl>
+            <dl className="guide-meta-line" aria-label="Guide details">
+              <div>
+                <dt>Updated</dt>
+                <dd>{date.format(new Date(updated))}</dd>
+              </div>
+              {guide.pageCount && (
+                <div>
+                  <dt>Length</dt>
+                  <dd>{guide.pageCount} pages</dd>
+                </div>
+              )}
+              <div>
+                <dt>File size</dt>
+                <dd>{formatBytes(guide.fileSize)}</dd>
+              </div>
               <div>
                 <dt>Category</dt>
                 <dd>
@@ -122,83 +200,63 @@ export default async function GuidePage({
                   </Link>
                 </dd>
               </div>
-              <div>
-                <dt>Collection</dt>
-                <dd>
-                  <Link
-                    href={`/collections/${getCollectionSlug(guide.collection)}`}
-                  >
-                    {guide.collection}
-                  </Link>
-                </dd>
-              </div>
-              <div>
-                <dt>Topic</dt>
-                <dd>{guide.topic}</dd>
-              </div>
-              {guide.authors.length > 0 && (
-                <div>
-                  <dt>Authors</dt>
-                  <dd>{guide.authors.join(", ")}</dd>
-                </div>
-              )}
-              {guide.publishedDate && (
-                <div>
-                  <dt>Published</dt>
-                  <dd>{date.format(new Date(guide.publishedDate))}</dd>
-                </div>
-              )}
-              {guide.lastReviewedDate && (
-                <div>
-                  <dt>Last reviewed</dt>
-                  <dd>{date.format(new Date(guide.lastReviewedDate))}</dd>
-                </div>
-              )}
-              <div>
-                <dt>Source file updated</dt>
-                <dd>{date.format(new Date(guide.fileModifiedDate))}</dd>
-              </div>
-              <div>
-                <dt>File</dt>
-                <dd>{formatBytes(guide.fileSize)} PDF</dd>
-              </div>
             </dl>
-            {guide.tags.length > 0 && (
-              <ul className="tag-list" aria-label="Guide tags">
-                {guide.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-            )}
-          </aside>
+          </div>
         </header>
 
-        {(neighbors.previous || neighbors.next) && (
-          <nav className="series-navigation" aria-label="Volumes in this collection">
-            <div>
-              {neighbors.previous && (
-                <Link href={`/guides/${neighbors.previous.slug}`}>
-                  <span>Previous volume</span>
-                  <strong>
-                    ← {neighbors.previous.shortTitle ?? neighbors.previous.displayTitle}
-                  </strong>
-                </Link>
-              )}
-            </div>
-            <div>
-              {neighbors.next && (
-                <Link href={`/guides/${neighbors.next.slug}`}>
-                  <span>Next volume</span>
-                  <strong>
-                    {neighbors.next.shortTitle ?? neighbors.next.displayTitle} →
-                  </strong>
-                </Link>
-              )}
-            </div>
-          </nav>
-        )}
+        <SeriesProgress guides={series} current={guide} />
 
-        <PdfPreview url={guide.pdfUrl} title={guide.displayTitle} />
+        <div className="guide-about-grid">
+          <div>
+            <section className="guide-about" aria-labelledby="about-volume-heading">
+              <p className="eyebrow">Orientation</p>
+              <h2 id="about-volume-heading">About this volume</h2>
+              <p>{synopsis}</p>
+            </section>
+
+            {guide.learningOutcomes?.length ? (
+              <section className="learning-outcomes" aria-labelledby="outcomes-heading">
+                <h2 id="outcomes-heading">
+                  After completing this volume, the resident should be able to
+                </h2>
+                <ol>
+                  {guide.learningOutcomes.map((outcome) => (
+                    <li key={outcome}>{outcome}</li>
+                  ))}
+                </ol>
+              </section>
+            ) : null}
+          </div>
+
+          <aside className="trust-panel" aria-labelledby="trust-heading">
+            <p className="eyebrow">Educational status</p>
+            <h2 id="trust-heading">Resident-level educational synthesis</h2>
+            <dl>
+              <div>
+                <dt>Last updated</dt>
+                <dd>{date.format(new Date(updated))}</dd>
+              </div>
+              <div>
+                <dt>Format</dt>
+                <dd>PDF study guide</dd>
+              </div>
+            </dl>
+            <p>{siteConfig.educationalDisclaimer}</p>
+            <a className="button button-secondary" href={reportHref}>
+              Report an error
+            </a>
+            <p className="trust-note">
+              Opens your email app with the guide and volume prefilled. No account
+              is required.
+            </p>
+          </aside>
+        </div>
+
+        <PdfPreview
+          url={guide.pdfUrl}
+          title={title}
+          coverUrl={guide.coverUrl}
+        />
 
         {related.length > 0 && (
           <section className="related-section" aria-labelledby="related-heading">

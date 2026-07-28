@@ -17,11 +17,17 @@ The importer:
    folders, and recognizable conflict copies.
 6. Computes a SHA-256 hash and source-relative deterministic guide ID.
 7. Infers title, volume, category, collection, topic, tags, and description.
-8. Applies `content/guide-overrides.json`.
-9. Checks filenames and inferred metadata for obvious privacy signals.
-10. Copies only new or changed PDFs to URL-safe paths.
-11. Preserves the current slug for an unchanged source-relative path.
-12. Writes and validates the generated manifest.
+8. Derives the PDF page count and caches a first-page PNG beneath
+   `public/guide-covers`.
+9. Applies `content/guide-overrides.json`.
+10. Checks filenames and inferred metadata for obvious privacy signals.
+11. Copies only new or changed PDFs to URL-safe paths.
+12. Preserves the current slug for an unchanged source-relative path.
+13. Writes and validates the generated manifest.
+
+Cover generation uses `pdftoppm` from Poppler. Set `PDFTOPPM_BIN` to an
+executable path if it is not available on `PATH`. Synchronization still reports
+a clear warning when a cover cannot be generated.
 
 The generated manifest never stores the absolute source root, Windows username,
 or OneDrive account information.

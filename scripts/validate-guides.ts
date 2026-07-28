@@ -30,6 +30,20 @@ async function main() {
         `${guide.displayTitle}: copied PDF is missing (${guide.destinationRelativePath}).`,
       );
     }
+    if (guide.coverUrl) {
+      const coverPath = path.resolve(
+        projectRoot,
+        "public",
+        ...guide.coverUrl.replace(/^\//, "").split("/"),
+      );
+      try {
+        await access(coverPath);
+      } catch {
+        errors.push(
+          `${guide.displayTitle}: generated cover is missing (${guide.coverUrl}).`,
+        );
+      }
+    }
   }
 
   const warnings = manifest.guides.flatMap((guide) =>

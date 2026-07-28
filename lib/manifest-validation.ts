@@ -57,6 +57,25 @@ export function validateManifest(manifest: GuideManifest): string[] {
     if (guide.fileSize < 0 || !Number.isFinite(guide.fileSize)) {
       errors.push(`${label}: invalid file size.`);
     }
+    if (
+      guide.pageCount !== undefined &&
+      (!Number.isInteger(guide.pageCount) || guide.pageCount < 1)
+    ) {
+      errors.push(`${label}: invalid page count.`);
+    }
+    if (
+      guide.coverUrl !== undefined &&
+      !guide.coverUrl.startsWith("/guide-covers/")
+    ) {
+      errors.push(`${label}: cover URL must remain beneath /guide-covers/.`);
+    }
+    if (
+      guide.learningOutcomes !== undefined &&
+      (guide.learningOutcomes.length !== 3 ||
+        guide.learningOutcomes.some((outcome) => !outcome.trim()))
+    ) {
+      errors.push(`${label}: learningOutcomes must contain three statements.`);
+    }
     if (!["published", "draft", "archived"].includes(guide.publicationStatus)) {
       errors.push(`${label}: invalid publication status.`);
     }

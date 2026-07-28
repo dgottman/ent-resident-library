@@ -6,14 +6,23 @@ export function CopyLinkButton() {
   const [copied, setCopied] = useState(false);
 
   async function copy() {
-    await navigator.clipboard.writeText(window.location.href);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
   }
 
   return (
-    <button className="button button-secondary" type="button" onClick={copy}>
-      {copied ? "Link copied" : "Copy page link"}
+    <button
+      className="button button-tertiary"
+      type="button"
+      onClick={copy}
+      aria-live="polite"
+    >
+      {copied ? "Link copied" : "Copy link"}
     </button>
   );
 }

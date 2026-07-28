@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowIcon, BookIcon } from "@/components/icons";
 import { GuideCard } from "@/components/guide-card";
+import { SeriesStartCard } from "@/components/series-start-card";
 import { SearchForm } from "@/components/search-form";
 import { siteConfig } from "@/content/site-config";
 import {
@@ -11,12 +12,10 @@ import {
 import { slugify } from "@/lib/guide-utils";
 
 export default function HomePage() {
-  const manuallyFeatured = publishedGuides.filter((guide) => guide.featured);
-  const featured = (
-    manuallyFeatured.length
-      ? manuallyFeatured
-      : publishedGuides.filter((guide) => guide.volume === 1)
-  ).slice(0, 3);
+  const seriesStarts = publishedGuides
+    .filter((guide) => guide.volume === 1)
+    .sort((a, b) => a.collection.localeCompare(b.collection))
+    .slice(0, 3);
   const categoryCards = categories
     .map((category) => ({
       category,
@@ -51,20 +50,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section shell" aria-labelledby="featured-heading">
+      <section className="section shell" aria-labelledby="series-heading">
         <div className="section-heading-row">
           <div>
             <p className="eyebrow">Start here</p>
-            <h2 id="featured-heading">Featured study guides</h2>
+            <h2 id="series-heading">Start a series</h2>
           </div>
           <Link className="arrow-link" href="/guides">
             View complete index <ArrowIcon />
           </Link>
         </div>
-        {featured.length ? (
-          <div className="guide-grid">
-            {featured.map((guide) => (
-              <GuideCard key={guide.id} guide={guide} />
+        {seriesStarts.length ? (
+          <div className="series-start-grid">
+            {seriesStarts.map((guide) => (
+              <SeriesStartCard
+                key={guide.id}
+                guide={guide}
+                volumeCount={
+                  publishedGuides.filter(
+                    (candidate) => candidate.collection === guide.collection,
+                  ).length
+                }
+              />
             ))}
           </div>
         ) : (

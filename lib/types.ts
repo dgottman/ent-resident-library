@@ -19,6 +19,7 @@ export interface Guide {
   seriesOrder: number;
   description: string;
   synopsis?: string;
+  learningOutcomes?: string[];
   tags: string[];
   authors: string[];
   publicationStatus: PublicationStatus;
@@ -29,6 +30,8 @@ export interface Guide {
   fileModifiedDate: string;
   synchronizedDate: string;
   fileSize: number;
+  pageCount?: number;
+  coverUrl?: string;
   fileHash: string;
   relatedGuideIds: string[];
   prerequisites: string[];
@@ -51,6 +54,7 @@ export type GuideOverride = Partial<
     | "shortTitle"
     | "description"
     | "synopsis"
+    | "learningOutcomes"
     | "category"
     | "collection"
     | "topic"

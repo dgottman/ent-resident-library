@@ -5,6 +5,7 @@ export const siteConfig = {
     "Resident-level guides for understanding otolaryngology from first principles.",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   author: "ENT Resident Library",
+  feedbackEmail: "feedback@entresidentlibrary.com",
   navigation: [
     { label: "Home", href: "/" },
     { label: "Study Guides", href: "/guides" },

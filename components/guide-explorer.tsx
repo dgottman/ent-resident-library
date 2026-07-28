@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { GuideCard } from "@/components/guide-card";
 import { SearchIcon } from "@/components/icons";
 import {
@@ -12,9 +11,14 @@ import type { Guide } from "@/lib/types";
 
 type SortOption = "title" | "updated" | "category" | "series";
 
-export function GuideExplorer({ guides }: { guides: Guide[] }) {
-  const searchParams = useSearchParams();
-  const [query, setQuery] = useState(searchParams.get("q") ?? "");
+export function GuideExplorer({
+  guides,
+  initialQuery = "",
+}: {
+  guides: Guide[];
+  initialQuery?: string;
+}) {
+  const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState("");
   const [collection, setCollection] = useState("");
   const [tag, setTag] = useState("");
@@ -185,7 +189,9 @@ function FilterSelect({
         value={value}
         onChange={(event) => onChange(event.target.value)}
       >
-        <option value="">All {label.toLowerCase()}s</option>
+        <option value="">
+          All {label === "Category" ? "categories" : `${label.toLowerCase()}s`}
+        </option>
         {options.map((option) => (
           <option key={option} value={option}>
             {option}

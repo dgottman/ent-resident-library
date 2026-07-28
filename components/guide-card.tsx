@@ -27,7 +27,9 @@ export function GuideCard({
         {guide.volumeLabel && <span>{guide.volumeLabel}</span>}
       </div>
       <h3>
-        <Link href={`/guides/${guide.slug}`}>{guide.displayTitle}</Link>
+        <Link href={`/guides/${guide.slug}`}>
+          {guide.shortTitle ?? guide.displayTitle}
+        </Link>
       </h3>
       {!compact && <p className="guide-description">{guide.description}</p>}
       <div className="guide-classification">
@@ -50,7 +52,10 @@ export function GuideCard({
       )}
       <div className="guide-card-meta">
         <span>Updated {dateFormatter.format(new Date(updated))}</span>
-        <span>{formatBytes(guide.fileSize)}</span>
+        <span>
+          {guide.pageCount ? `${guide.pageCount} pages · ` : ""}
+          {formatBytes(guide.fileSize)}
+        </span>
       </div>
     </article>
   );

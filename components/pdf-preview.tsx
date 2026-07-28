@@ -1,8 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { GuideCover } from "@/components/guide-cover";
 
-export function PdfPreview({ url, title }: { url: string; title: string }) {
+export function PdfPreview({
+  url,
+  title,
+  coverUrl,
+}: {
+  url: string;
+  title: string;
+  coverUrl?: string;
+}) {
   const [visible, setVisible] = useState(false);
   return (
     <section className="pdf-preview" aria-labelledby="preview-heading">
@@ -33,10 +42,17 @@ export function PdfPreview({ url, title }: { url: string; title: string }) {
         </>
       ) : (
         <div className="preview-placeholder">
-          <p>
-            The PDF is loaded only when requested to keep this page fast,
-            especially on mobile.
-          </p>
+          <GuideCover
+            src={coverUrl}
+            alt={`First page preview of ${title}`}
+          />
+          <div>
+            <h3>Preview before loading</h3>
+            <p>
+              The full PDF is loaded only when requested to keep this page fast,
+              especially on mobile.
+            </p>
+          </div>
         </div>
       )}
     </section>

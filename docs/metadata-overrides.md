@@ -11,6 +11,12 @@ source-relative path is easiest to recognize:
   "Head and Neck/Free Flaps/Free_Flap_Reconstruction_Volume_I_Reconstructive_Thinking.pdf": {
     "shortTitle": "Reconstructive Thinking",
     "description": "Foundational principles for planning free-flap reconstruction.",
+    "synopsis": "Longer volume-specific orientation for the landing page.",
+    "learningOutcomes": [
+      "Describe the defect using the guide's reconstructive framework.",
+      "Connect tissue requirements to a defensible reconstructive plan.",
+      "Present a primary plan and reasoned backup."
+    ],
     "tags": ["free flap", "reconstruction", "head and neck"],
     "authors": ["Author Name, MD"],
     "featured": true,
@@ -28,6 +34,8 @@ Vestibular examples.
 - `displayTitle`
 - `shortTitle`
 - `description`
+- `synopsis`
+- `learningOutcomes` (exactly three resident-level statements)
 - `category`
 - `collection`
 - `topic`
