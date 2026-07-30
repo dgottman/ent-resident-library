@@ -14,8 +14,7 @@ import { slugify } from "@/lib/guide-utils";
 export default function HomePage() {
   const seriesStarts = publishedGuides
     .filter((guide) => guide.volume === 1)
-    .sort((a, b) => a.collection.localeCompare(b.collection))
-    .slice(0, 3);
+    .sort((a, b) => a.collection.localeCompare(b.collection));
   const categoryCards = categories
     .map((category) => ({
       category,

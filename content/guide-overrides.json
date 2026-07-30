@@ -128,5 +128,65 @@
       "Explain when postoperative radiation, re-resection, reirradiation, observation, ablation, targeted therapy, or trials may be considered.",
       "Design surveillance and survivorship priorities that reflect salivary histology and its time horizon."
     ]
+  },
+  "Trauma and Emergency ENT/Face Trauma/Facial_Trauma_Volume_I_Seeing_the_Injured_Face.pdf": {
+    "shortTitle": "Seeing the Injured Face",
+    "description": "Turn a swollen or bleeding face into a time-sensitive injury map by protecting airway and vision, performing a reproducible examination, reviewing CT systematically, and assigning urgency.",
+    "synopsis": "Volume I establishes the assessment framework for the Facial Trauma series before regional repair begins. It organizes the first consultation around physiology, vision, the structural logic of the face, a functional examination, and an eight-pass CT review. Residents learn to separate fracture names from threatened function; identify airway, hemorrhagic, ocular, neurologic, and skull-base concerns; document limitations; and build a concise injury map with the right timeline. Integrated trauma-bay cases reinforce presentation and triage. Unlike the following regional volumes, this opening volume deliberately stops before detailed exposure, reduction, fixation, and reconstruction. It prepares residents to recognize what is immediately dangerous, what requires urgent specialist input, and what can be planned safely.",
+    "learningOutcomes": [
+      "Prioritize airway, hemorrhagic, ocular, neurologic, and skull-base threats before fracture repair.",
+      "Perform and document a reproducible facial examination and independent multi-plane CT review.",
+      "Present a functional injury map with emergent, urgent, delayed-operative, or nonoperative priorities."
+    ]
+  },
+  "Trauma and Emergency ENT/Face Trauma/Facial_Trauma_Volume_II_Orbit_Frontal_Sinus_Anterior_Skull_Base.pdf": {
+    "shortTitle": "Orbit, Frontal Sinus, and Anterior Skull Base",
+    "description": "Manage upper-face trauma through vision, orbital mechanics, sinus drainage, and intracranial separation—localizing diplopia, planning reconstruction, and applying a structured frontal-sinus decision framework.",
+    "synopsis": "Volume II narrows the initial trauma framework to the upper face, where orbit, frontal sinus, and anterior skull base injuries share thin bony boundaries and competing functional priorities. Residents move from the threatened eye and orbital fracture evaluation to exposure, implant geometry, and postoperative checks, then upward to frontal-sinus drainage, posterior-table injury, CSF leak, and surveillance. The guide’s five-variable frontal-sinus worksheet links anatomy and reliability of follow-up to preservation, contour repair, obliteration, or cranialization decisions. It assumes the trauma survey and complete examination from Volume I. Unlike Volume III’s central and lateral midface reconstruction, this volume focuses on protecting vision and maintaining durable separation between sinonasal and intracranial spaces.",
+    "learningOutcomes": [
+      "Localize orbital trauma through vision, motility, globe position, and CT findings while recognizing time-critical ocular threats.",
+      "Plan orbital reconstruction around defect geometry, exposure, implant verification, and postoperative surveillance.",
+      "Use anterior-table, posterior-table, outflow-tract, dural, and comminution findings to frame frontal-sinus decisions."
+    ]
+  },
+  "Trauma and Emergency ENT/Face Trauma/Facial_Trauma_Volume_III_Rebuilding_the_Midface.pdf": {
+    "shortTitle": "Rebuilding the Midface",
+    "description": "Restore midface dimensions by selecting trustworthy references, rebuilding the maxillary platform and buttresses, and verifying nasal, canthal, malar, orbital, and occlusal relationships together.",
+    "synopsis": "Volume III turns the injury map into region-specific reconstruction of the central and lateral midface. It treats nasal, NOE, zygomaticomaxillary, Le Fort-level, palatal, and dentoalveolar injuries as a connected three-dimensional frame rather than isolated fracture labels. Residents learn to define lost height, width, projection, rotation, canthal position, arch width, and occlusion; identify references that remain trustworthy; restore the dental platform; and verify the whole face before closure. Chapters on exposure, reduction, fixation, postoperative assessment, and secondary deformity make the reconstructive logic practical. It follows Volume II’s upper-face emergencies and uses the mandible and orbit as references, while leaving mandibular biomechanics and condylar management to Volume IV.",
+    "learningOutcomes": [
+      "Define midface injury by lost dimensions, occlusion, orbital support, and central or lateral structural relationships.",
+      "Select reliable references and sequence reduction before definitive fixation of the maxillary platform and buttresses.",
+      "Recognize early and late failure through occlusion, canthal position, width, projection, globe position, and trismus."
+    ]
+  },
+  "Trauma and Emergency ENT/Face Trauma/Facial_Trauma_Volume_IV_Restoring_the_Mandible.pdf": {
+    "shortTitle": "Restoring the Mandible",
+    "description": "Use occlusion, ring biomechanics, fracture pattern, condylar function, and independent verification to plan mandibular stabilization, rehabilitation, and complication surveillance.",
+    "synopsis": "Volume IV focuses on the mobile lower facial arch: occlusion, mandibular continuity, transverse width, ramal height, nerve function, and temporomandibular mechanics. It begins with examination, CT, treatment timing, teeth, and biomechanics, then applies load-sharing and load-bearing logic to anterior, body, angle, ramus, and condylar fractures. Residents learn to choose between closed functional treatment and ORIF according to fracture level, function, reducibility, rehabilitation capacity, and patient factors rather than a single threshold. Operative exposures, MMF safety, postoperative recovery, and failure analysis round out the workflow. Positioned after the midface volume, this guide uses the dental relationship as a reconstructive reference; complex soft-tissue injury and panfacial sequencing follow in Volumes V and VI.",
+    "learningOutcomes": [
+      "Use occlusion, motion, palpation, and CT to localize mandibular injury and identify additional fracture sites.",
+      "Explain how loading, fracture pattern, and reduction quality guide fixation and MMF decisions.",
+      "Compare closed functional treatment and ORIF for condylar injuries while planning rehabilitation and surveillance."
+    ]
+  },
+  "Trauma and Emergency ENT/Face Trauma/Facial_Trauma_Volume_V_Repairing_the_Facial_Envelope.pdf": {
+    "shortTitle": "Repairing the Facial Envelope",
+    "description": "Assess and repair facial soft-tissue wounds as functional injuries, protecting eyelids, lacrimal drainage, facial nerve, parotid duct, free borders, tissue viability, and scar outcomes.",
+    "synopsis": "Volume V shifts from the bony framework to the facial soft-tissue envelope, treating wounds as possible disruptions of closure, tear drainage, animation, oral competence, salivary flow, contour, and specialized landmarks. Residents follow a repeatable sequence: examine function before anesthetic, expose the true depth, irrigate and debride conservatively, map critical anatomy, repair in layers, and plan follow-up. The regional chapters address eyelid and canalicular trauma, extratemporal facial nerve injury, parotid and duct trauma, and injuries of the lip, cheek, nose, and ear; later material covers bites, ballistic wounds, scars, and revision. Unlike Volume IV’s mandibular stabilization, this volume centers on structures hidden in the wound itself. Volume VI then integrates skeletal and soft-tissue considerations in panfacial reconstruction.",
+    "learningOutcomes": [
+      "Examine facial wounds for hidden injury to function before anesthetic, irrigation, or closure.",
+      "Plan layered repair around eyelid, canalicular, facial-nerve, parotid-duct, muscle, cartilage, and free-border anatomy.",
+      "Match wound contamination, tissue viability, follow-up, and scar biology to safe postoperative planning."
+    ]
+  },
+  "Trauma and Emergency ENT/Face Trauma/Facial_Trauma_Volume_VI_Rebuilding_the_Facial_Coordinate_System.pdf": {
+    "shortTitle": "Rebuilding the Facial Coordinate System",
+    "description": "Plan panfacial reconstruction by identifying trustworthy references, restoring coupled facial dimensions, sequencing fixation, verifying geometry independently, and analyzing early or late failure.",
+    "synopsis": "Volume VI is the Facial Trauma series capstone, for situations in which several reference systems are displaced and a locally accurate reduction can still create a globally wrong face. It frames panfacial repair as restoration of a coordinate system: decide what is intact, reconstructable, or unreliable; choose vertical and transverse axes with a linkage point; restore occlusion, width, height, projection, orbital volume, and central support; then verify independently before definitive fixation. Operative planning, digital tools, altered biology, postoperative failure, complications, and secondary reconstruction extend the regional principles from the earlier volumes. Residents gain a way to reason through sequencing rather than memorize a universal order. It completes the progression from emergency recognition to regional reconstruction and integrated whole-face recovery.",
+    "learningOutcomes": [
+      "Classify cranial, orbital, occlusal, and soft-tissue references as intact, reconstructable, or unreliable.",
+      "Choose a sequencing axis, linkage point, and independent verification method before definitive panfacial fixation.",
+      "Analyze postoperative and secondary deformity as failures of geometry, biology, stability, soft tissue, or function."
+    ]
   }
 }

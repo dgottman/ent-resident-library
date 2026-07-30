@@ -7,6 +7,7 @@ export const folderMappings = {
     "Free Flaps": "Free-Flap Reconstruction",
     Vestibular: "Vestibular System",
     "Salivary Gland Neoplasms": "Salivary Gland Neoplasms",
+    "Face Trauma": "Facial Trauma",
   },
 } satisfies {
   categories: Record<string, string>;
